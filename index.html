@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fashion — Berita & Tren Busana Terbaru</title>
+
+  <meta name="description" content="Berita fashion terbaru: tren busana, koleksi desainer, tips gaya, dan update industri mode terkini untuk inspirasi gaya kamu setiap hari." />
+  <meta name="keywords" content="fashion, berita fashion, tren busana, outfit, gaya hidup, desainer, industri mode, streetwear, modest fashion, aksesoris" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://rajawalib321-del.github.io/fashion/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fashion — Berita & Tren Busana Terbaru" />
+  <meta property="og:description" content="Update tren busana, industri mode, desainer, dan gaya hidup. Ringkas, relevan, dan mudah diikuti." />
+  <meta property="og:url" content="https://rajawalib321-del.github.io/fashion/" />
+  <meta property="og:site_name" content="Fashion" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Fashion — Berita & Tren Busana Terbaru" />
+  <meta name="twitter:description" content="Berita fashion terbaru: tren busana, koleksi desainer, tips gaya, dan update industri mode." />
+
+  <!-- Simple, clean styling (no external deps) -->
+  <style>
+    :root{
+      --bg:#0b0d10;
+      --card:#11151b;
+      --text:#e9eef6;
+      --muted:#a9b4c0;
+      --line:rgba(255,255,255,.10);
+      --accent:#c6ff6b;
+      --accent2:#7bd7ff;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 1080px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(900px 400px at 10% 0%, rgba(123,215,255,.20), transparent 55%),
+        radial-gradient(900px 400px at 85% 10%, rgba(198,255,107,.18), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 70px}
+    .topbar{
+      display:flex; gap:12px; align-items:center; justify-content:space-between;
+      padding:14px 16px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background: rgba(17,21,27,.70);
+      backdrop-filter: blur(10px);
+    }
+    .brand{display:flex; gap:10px; align-items:center}
+    .logo{
+      width:40px; height:40px; border-radius:14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: var(--shadow);
+    }
+    .brand h1{font-size:16px; margin:0}
+    .brand p{margin:0; color:var(--muted); font-size:12px}
+    nav{display:flex; gap:14px; flex-wrap:wrap}
+    nav a{
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px solid transparent;
+      color:var(--muted);
+    }
+    nav a:hover{
+      border-color:var(--line);
+      color:var(--text);
+      text-decoration:none;
+      background: rgba(255,255,255,.03);
+    }
+
+    .hero{
+      margin-top:18px;
+      padding:26px 18px;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      box-shadow: var(--shadow);
+    }
+    .hero .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      font-size:12px; color:var(--muted);
+      border:1px solid var(--line);
+      padding:6px 10px; border-radius:999px;
+      background: rgba(0,0,0,.22);
+    }
+    .dot{
+      width:8px; height:8px; border-radius:999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(198,255,107,.10);
+    }
+    .hero h2{
+      margin:14px 0 10px;
+      font-size:32px;
+      letter-spacing:-.02em;
+      line-height:1.15;
+    }
+    .hero p{margin:0; color:var(--muted); max-width:70ch}
+    .hero .actions{margin-top:16px; display:flex; gap:10px; flex-wrap:wrap}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      font-weight:600;
+    }
+    .btn.primary{
+      border-color:transparent;
+      background: linear-gradient(135deg, rgba(198,255,107,.95), rgba(123,215,255,.90));
+      color:#081012;
+    }
+    .btn:hover{text-decoration:none; filter:brightness(1.05)}
+    .grid{
+      display:grid;
+      grid-template-columns: 1.4fr .6fr;
+      gap:16px;
+      margin-top:16px;
+    }
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr}
+      .hero h2{font-size:28px}
+    }
+
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background: rgba(17,21,27,.70);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .card header{
+      padding:14px 16px;
+      border-bottom:1px solid var(--line);
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+    }
+    .card header h3{margin:0; font-size:14px; letter-spacing:.02em}
+    .card header span{color:var(--muted); font-size:12px}
+    .list{padding:8px}
+    article{
+      padding:12px;
+      border-radius:14px;
+      border:1px solid transparent;
+    }
+    article:hover{
+      border-color:var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .meta{color:var(--muted); font-size:12px; display:flex; gap:10px; flex-wrap:wrap}
+    .title{margin:6px 0 6px; font-size:16px}
+    .excerpt{margin:0; color:var(--muted); font-size:13px}
+    .tag{
+      display:inline-flex; align-items:center;
+      padding:4px 8px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--muted);
+      font-size:12px;
+    }
+    .side{
+      display:grid; gap:16px;
+      grid-auto-rows:min-content;
+    }
+    .box{padding:14px 16px}
+    .box p{margin:8px 0 0; color:var(--muted); font-size:13px}
+    .chips{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap}
+    footer{
+      margin-top:22px;
+      color:var(--muted);
+      font-size:12px;
+      display:flex; gap:10px; justify-content:space-between; flex-wrap:wrap;
+      padding:0 4px;
+    }
+    .hr{height:1px; background:var(--line); margin:16px 0}
+    .search{
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+      margin-top:14px;
+    }
+    input[type="search"]{
+      flex:1;
+      min-width: 230px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      outline:none;
+      background: rgba(0,0,0,.22);
+      color: var(--text);
+    }
+    .note{
+      font-size:12px; color:var(--muted);
+      margin-top:8px;
+    }
+  </style>
+
+  <!-- Basic structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Fashion",
+    "url":"https://rajawalib321-del.github.io/fashion/",
+    "description":"Berita fashion terbaru: tren busana, industri mode, desainer, serta gaya hidup yang sedang berkembang.",
+    "inLanguage":"id-ID"
+  }
+  </script>
+</head>
+
+<body>
+  <main class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Fashion</h1>
+          <p>Berita fashion terbaru: tren busana, industri mode, desainer, & gaya hidup.</p>
+        </div>
+      </div>
+
+      <nav aria-label="Navigasi">
+        <a href="#tren">Tren</a>
+        <a href="#streetwear">Streetwear</a>
+        <a href="#modest">Modest</a>
+        <a href="#industri">Industri</a>
+        <a href="#tips">Tips Gaya</a>
+      </nav>
+    </div>
+
+    <section class="hero" aria-label="Hero">
+      <div class="kicker"><span class="dot"></span> Update ringkas, relevan, dan gampang diikuti</div>
+      <h2>Temukan ide outfit & kabar mode yang lagi ramai dibicarakan.</h2>
+      <p>
+        Halaman ini dirancang untuk mengkurasi kabar fashion: tren busana, koleksi desainer, pergerakan industri,
+        sampai inspirasi gaya hidup yang terasa dekat dengan keseharian.
+      </p>
+
+      <div class="search" role="search" aria-label="Pencarian artikel">
+        <input id="q" type="search" placeholder="Cari: tren warna, outfit kantor, streetwear..." autocomplete="off" />
+        <a class="btn primary" href="#terbaru" onclick="return false;">Cari</a>
+      </div>
+      <div class="note">Tip: kamu bisa ganti daftar artikel di bawah sesuai konten yang kamu publish.</div>
+
+      <div class="actions">
+        <a class="btn primary" href="#terbaru">Lihat berita terbaru</a>
+        <a class="btn" href="https://github.com/" target="_blank" rel="noopener">Kelola konten (GitHub)</a>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Konten">
+      <div class="card" id="terbaru">
+        <header>
+          <h3>Terbaru Hari Ini</h3>
+          <span id="todayLabel">—</span>
+        </header>
+
+        <div class="list" id="postList">
+          <!-- Contoh artikel (silakan ubah/jadikan dinamis) -->
+          <article data-title="Tren warna musim ini: tone netral bertemu aksen cerah" data-tags="tren">
+            <div class="meta">
+              <span class="tag">Tren</span>
+              <span>•</span>
+              <span>5 menit baca</span>
+              <span>•</span>
+              <time datetime="2025-12-14">14 Des 2025</time>
+            </div>
+            <h4 class="title">Tren warna musim ini: tone netral bertemu aksen cerah</h4>
+            <p class="excerpt">Palet yang tenang tetap dominan, tapi aksen neon lembut mulai muncul di aksesori dan outer—cukup untuk bikin outfit “hidup” tanpa berlebihan.</p>
+          </article>
+
+          <article data-title="Streetwear rapi: cara tampil santai tapi tetap kelihatan ‘niat’" data-tags="streetwear">
+            <div class="meta">
+              <span class="tag">Streetwear</span>
+              <span>•</span>
+              <span>6 menit baca</span>
+              <span>•</span>
+              <time datetime="2025-12-13">13 Des 2025</time>
+            </div>
+            <h4 class="title">Streetwear rapi: cara tampil santai tapi tetap kelihatan ‘niat’</h4>
+            <p class="excerpt">Kuncinya ada di potongan yang pas, layering tipis, dan sepatu yang “bersih”. Bukan soal mahal—soal proporsi dan konsistensi detail.</p>
+          </article>
+
+          <article data-title="Modest fashion: layering ringan untuk cuaca tropis" data-tags="modest">
+            <div class="meta">
+              <span class="tag">Modest</span>
+              <span>•</span>
+              <span>4 menit baca</span>
+              <span>•</span>
+              <time datetime="2025-12-12">12 Des 2025</time>
+            </div>
+            <h4 class="title">Modest fashion: layering ringan untuk cuaca tropis</h4>
+            <p class="excerpt">Pilih bahan yang bernapas dan warna yang memantulkan cahaya. Teknik layering tetap bisa nyaman—asal tidak “menumpuk” di area yang salah.</p>
+          </article>
+
+          <article data-title="Industri mode: kenapa brand mulai fokus ke material daur ulang" data-tags="industri">
+            <div class="meta">
+              <span class="tag">Industri</span>
+              <span>•</span>
+              <span>7 menit baca</span>
+              <span>•</span>
+              <time datetime="2025-12-10">10 Des 2025</time>
+            </div>
+            <h4 class="title">Industri mode: kenapa brand mulai fokus ke material daur ulang</h4>
+            <p class="excerpt">Bukan sekadar tren “hijau”. Dorongan regulasi, permintaan pasar, dan transparansi rantai pasok membuat bahan alternatif makin serius digarap.</p>
+          </article>
+        </div>
+
+        <div class="hr"></div>
+        <div class="box" id="tips">
+          <h3 style="margin:0; font-size:14px;">Tips Gaya Cepat</h3>
+          <p>
+            Mulai dari satu “signature piece” (jaket, sepatu, tas), lalu bangun outfit di sekitarnya.
+            Kalau ragu, pilih 2 warna utama + 1 aksen kecil.
+          </p>
+        </div>
+      </div>
+
+      <aside class="side" aria-label="Sidebar">
+        <div class="card" id="tren">
+          <header><h3>Kategori Populer</h3><span>Kurasi</span></header>
+          <div class="box">
+            <div class="chips">
+              <span class="tag">Tren Busana</span>
+              <span class="tag" id="streetwear">Streetwear</span>
+              <span class="tag" id="modest">Modest</span>
+              <span class="tag" id="industri">Industri Mode</span>
+              <span class="tag">Aksesori</span>
+              <span class="tag">Beauty</span>
+            </div>
+            <p>Gunakan kategori ini untuk memudahkan pembaca menemukan topik yang mereka suka.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <header><h3>Tentang Halaman</h3><span>Singkat</span></header>
+          <div class="box">
+            <p>
+              Halaman fashion ini membahas tren busana, industri mode, desainer, serta gaya hidup yang sedang berkembang.
+              Cocok untuk update cepat dan inspirasi harian.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <header><h3>CTA</h3><span>Ikuti update</span></header>
+          <div class="box">
+            <p>Ingin halaman ini jadi lebih “news-like”? Tambahkan artikel per hari dan update judul + ringkasan agar konsisten.</p>
+            <div class="actions" style="margin-top:12px;">
+              <a class="btn primary" href="#terbaru">Mulai baca</a>
+              <a class="btn" href="https://rajawalib321-del.github.io/" target="_blank" rel="noopener">Kembali ke Home</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Fashion • GitHub Pages</div>
+      <div>
+        <a href="https://github.com/" target="_blank" rel="noopener">Open source</a>
+        <span>•</span>
+        <a href="#terbaru">Terbaru</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Tanggal di header "Terbaru Hari Ini"
+    const now = new Date();
+    const months = ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"];
+    const label = `${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`;
+    document.getElementById("todayLabel").textContent = label;
+    document.getElementById("year").textContent = now.getFullYear();
+
+    // Filter sederhana (client-side)
+    const q = document.getElementById("q");
+    const posts = Array.from(document.querySelectorAll("#postList article"));
+
+    function applyFilter() {
+      const term = (q.value || "").trim().toLowerCase();
+      posts.forEach(p => {
+        const title = (p.dataset.title || "").toLowerCase();
+        const tags = (p.dataset.tags || "").toLowerCase();
+        const match = !term || title.includes(term) || tags.includes(term);
+        p.style.display = match ? "" : "none";
+      });
+    }
+    q.addEventListener("input", applyFilter);
+  </script>
+</body>
+</html>
